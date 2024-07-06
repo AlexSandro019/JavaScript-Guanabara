@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(204, 9, 214);
+            color: white;
+            font: normal 18pt arial;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+var p1 = document.getElementsByTagName("p")[1] 
+document.write(p1.innerText) //Mostra o texto do p1
+p1.style.color = 'black' //Muda a cor da variável
+var corpo = document.body //Atalho criado para o body "Corpo"
+corpo.style.background = "purple" //Posso mudar o fundo
+document.write(p1.innerHTML)//Vem o comando formatado
+/*
+var d = document.getElementById('msg')
+d.style.background = "green"//Fundo verde
+d.innerText = "Estou aguardando..."//Modifiquei dentro da DOM
+document.getElementById('msg').innerText = 'Hello'// Mesma coisa acima porem muito grande
+*/
+var d = document.querySelector('div#msg') //método mais recente
+d.style.color = 'blue'
+d.style.background = 'red'
+
+    </script>
+</body>
+</html>
