@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é?</title>
+</head>
+<body>
+    <h1>Descubra se você é brasileiro</h1>
+    Você nasceu em <input type="text" name="pais" id="pais"> 
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var txtp = document.getElementById('pais').value
+            var res = document.getElementById('resultado')
+            console.log(txtp)
+            res.innerHTML = `Veremos se você é brasileiro/a`
+            if(txtp.toLowerCase() == 'brasil'){
+                res.innerHTML += `<p>Você <strong>É</strong> brasileiro</p>`
+            }else{
+                res.innerHTML += `<p>Você <strong>NÃO</strong> é brasileiro</p>`
+            }
+           
+
+        }
+    </script>
+</body>
+</html>
