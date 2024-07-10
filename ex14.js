@@ -1,5 +1,8 @@
 var agora = new Date()
 var diaSem = agora.getDay()
+var diahora = agora.getHours()
+var diaMin = agora.getMinutes()
+
 /*
  0 = Domingo
  1 = Segunda
@@ -37,3 +40,5 @@ var diaSem = agora.getDay()
             console.log('[ERRO] dia inválido!')
             break
  }
+ console.log(`Agora são ${diahora} horas e ${diaMin} minutos`)
+ 
